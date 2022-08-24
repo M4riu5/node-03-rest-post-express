@@ -4,7 +4,8 @@
   "description": "CREATE NEW PROJECT",
   "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/server.js "
+    "start": "nodemon src/server.js ",
+    "fe": "lite-server --baseDir=\"public\" "
   },
   "author": "",
   "license": "MIT",
@@ -14,6 +15,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "lite-server": "^2.6.1",
     "nodemon": "^2.0.19"
   }
 }

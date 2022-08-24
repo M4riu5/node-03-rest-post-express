@@ -46,6 +46,8 @@ app.get('/api/users/3', (request,response) => {
 // POST /api/users -> sukurti nauja useri su gautu name ir prideti prie esamu, grazinti 201 statusa su zinute
 app.post('/api/users', (request, response)=> {
     //Add new user
+    // response.sendStatus(400)
+    // return
    const newUserName = request.body.name
    const newUserId = users.length +1
    const newUserObj = {
@@ -65,5 +67,5 @@ app.use((req,res)=> {
     res.status(404).json({msg: 'Sorry page not found'})
 })
 
-const port = 3000
+const port = 5000
 app.listen(port, ()=> console.log(`server is listening on port 3000`))
