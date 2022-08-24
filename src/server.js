@@ -53,7 +53,10 @@ app.post('/api/users', (request, response)=> {
     name: newUserName
    }
    users.push(newUserObj)
-    response.json({msg: `${newUserName} Have been added !`})
+    response.status(201).json({
+    msg: `${newUserName} Have been added !`,
+    success: true
+})
 })
 
 
